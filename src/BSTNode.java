@@ -9,11 +9,13 @@ public class BSTNode {
     private BSTNode left;
     private BSTNode right;
     private int val;
+    private boolean visited;
 
     public BSTNode(int val) {
         this.left = null;
         this.right = null;
         this.val = val;
+        this.visited = false;
     }
 
     /** Getters and Setters **/
@@ -43,5 +45,13 @@ public class BSTNode {
 
     public boolean equals(BSTNode other) {
         return this.val == other.val;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited() {
+        this.visited = true;
     }
 }
